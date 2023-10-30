@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>August project 4</title>
+<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quantico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+</head>
+<body>
+<div class="splitter-header-container">
+    <h1>Splitter</h1>
+</div> 
+<div id="app">
+   <div class="bill-container">
+       <div class="sub-container-bill">
+            <label for="bill">Bill</label>
+            <input type="text" id="bill" name="bill" placeholder="0">
+           <i class="fas fa-euro-sign"></i>
+       </div>
+       <div class="select-tip-container">
+        <div class="select-tip-header-container">
+            <label>Select tip %</label>
+        </div>
+       <div class="select-tip-sub-container">
+            <input type="radio" id="five" value="5" name="tipwaiter" checked onclick="runcalculator()"> <label for="five">5%</label>
+            <input type="radio" id="ten" value="10" name="tipwaiter" onclick="runcalculator()"><label for="ten">10%</label>
+            <input type="radio" id="fifteen" value="15" name="tipwaiter" onclick="runcalculator()"> <label for="fifteen">15%</label>
+            <input type="radio" id="twentyfive" value="25" name="tipwaiter" onclick="runcalculator()"> <label for="twentyfive">25%</label>
+            <input type="radio" id="fifty" value="50" name="tipwaiter" onclick="runcalculator()"><label for="fifty">50%</label>
+            <input type="text"  id="custom" name="tipwaiter" placeholder="Custom" value="" onclick="calculateTip()">
+       </div>
+    </div>
+        <div class="sub-container-people">
+            <label for="people">Number of People</label>
+            <label id="warningzero">Can't be zero or words</label>
+            <input type="text" id="people" name="people" placeholder="0">
+            <i class="far fa-user"></i>
+        </div>
+   </div>
+   <div class="amount-container">
+       <div class="total-amount-tip-container">
+           <div class="total-amount-sub-container">
+            <span>Tip Amount</span>
+            <span>/ person</span>
+           </div>
+           <div class="total-amount-price-container">
+               <h2 id="total-amount">€0.00</h2>
+           </div>
+       </div>
+       <div class="total-person-container">
+           <div class="total-person-sub-container">
+            <span>Total</span>
+            <span>/ person</span>
+           </div>
+           <div class="total-amount-price-person-container">
+             <h2 id="total-person">€0.00</h2>
+           </div>
+       </div>
+       <div class="reset-container">
+        <button id="resetbutton">Reset</button>
+       </div>
+   </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
+
+
